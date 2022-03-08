@@ -2,6 +2,6 @@
 ## website
 
 ##### Todo:
- - [ ] Make it superior
- - [x] Make it hype!
- - [ ] Make it work
+ - [ ] expand
+ - [ ] come up with what its for
+ - [ ] learn html, css, javascript
