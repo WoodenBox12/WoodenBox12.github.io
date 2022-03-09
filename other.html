@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en-gb">
 
 <head>
+    <link rel="stylesheet" href="./style/main.css" />
 
+    <script>
+        function myFunction() 
+        {
+
+            if (document.getElementById("woah").style.backgroundColor == "#222222") {
+
+                document.getElementById("woah").style.backgroundColor = "blue";
+            }
+            else if (document.getElementById("woah").style.backgroundColor == "blue") {
+
+                document.getElementById("woah").style.backgroundColor = "#222222";
+            }
+            else {
+
+                document.getElementById("woah").style.backgroundColor = "blue";
+
+                document.getElementById("woah").style.backgroundImage = "./images/dan.png";
+            }
+             
+        }
+    </script>
 </head>
 
-<body>
+<body id="woah">
 
-    <p>word</p>
+    <h1 class="heading">other</h1>
 
+    <button type="button" onclick="myFunction()">Button</button>
 
-
+    <p>woah!</p>
 
 </body>
 

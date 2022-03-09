@@ -3,3 +3,9 @@ body {
 	color: white;
 	text-align: center;
 }
+.heading {
+	font-size: 400%;
+}
+#woah {
+	color: white;
+}
