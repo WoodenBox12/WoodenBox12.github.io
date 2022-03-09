@@ -5,9 +5,18 @@
 <head>
     <link rel="stylesheet" href="./style/main.css" />
 
+</head>
+
+<body id="woah">
+
+    <h1 class="heading">other</h1>
+
+    <button type="button" onclick="myFunction()">Button</button>
+
+    <p>woah!</p>
+
     <script>
-        function myFunction() 
-        {
+        function myFunction() {
 
             if (document.getElementById("woah").style.backgroundColor == "#222222") {
 
@@ -21,20 +30,14 @@
 
                 document.getElementById("woah").style.backgroundColor = "blue";
 
-                document.getElementById("woah").style.backgroundImage = "./images/dan.png";
+                document.getElementById("woah").classList.toggle("background");
             }
-             
+
         }
     </script>
-</head>
 
-<body id="woah">
 
-    <h1 class="heading">other</h1>
-
-    <button type="button" onclick="myFunction()">Button</button>
-
-    <p>woah!</p>
+    document.getElementById("woah").classList.toggle("background")
 
 </body>
 
