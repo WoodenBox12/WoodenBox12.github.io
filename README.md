@@ -3,5 +3,5 @@
 
 ##### Todo:
  - [ ] expand
- - [ ] come up with what its for
+ - [ ] make it load selected background from cookie
  - [ ] learn html, css, javascript
