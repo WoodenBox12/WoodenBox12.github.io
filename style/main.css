@@ -5,10 +5,20 @@ body {
 	font-size: 400%;
 }
 .theme1 {
-	background-image: url(../images/dan.png);
+	background-color: #222222;
 	color: white;
 }
 .theme2 {
-	background-color: #222222;
-	color: white;
+	background-image: url(../images/dan.png);
+	color: forestgreen;
+	font-family: "Trebuchet MS";
+}
+@font-face {
+	font-family: iHateLiam;
+	src: url("../fonts/Coca Cola ii.ttf");
+}
+.theme3 {
+	background-color: saddlebrown;
+	color: yellow;
+	font-family: "iHateLiam";
 }
