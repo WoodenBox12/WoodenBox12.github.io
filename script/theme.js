@@ -38,7 +38,7 @@ function themeChange() {
         document.body.classList.add("theme2");
 
         document.cookie = "Theme=theme2";
-
+        
     }
 
     else if (getCookie("Theme") == "theme2") {
