@@ -33,7 +33,7 @@
                 document.body.classList.add("theme2");
 
                 document.cookie = "Theme=theme2";
-                break
+                
             }
 
             else if (getCookie("Theme") == "theme2") {
@@ -42,29 +42,50 @@
                 document.body.classList.add("theme1");
 
                 document.cookie = "Theme=theme1";
-                break
+                
             }
 
         }
 
         function themeChange() {
 
-            themeLoadFromCookie()
+            //themeLoadFromCookie()
 
-            if (document.body.classList.contains("theme1")) {
+            if (getCookie("Theme") == "theme1") {
 
                 document.body.classList.remove("theme1");
                 document.body.classList.add("theme2");
 
                 document.cookie = "Theme=theme2";
+
             }
 
-            else if (document.body.classList.contains("theme2")) {
+            else if (getCookie("Theme") == "theme2") {
 
                 document.body.classList.remove("theme2");
                 document.body.classList.add("theme1");
 
                 document.cookie = "Theme=theme1";
+
+            }
+
+            else {
+
+                if (document.body.classList.contains("theme1")) {
+
+                    document.body.classList.remove("theme1");
+                    document.body.classList.add("theme2");
+
+                    document.cookie = "Theme=theme2";
+                }
+
+                else if (document.body.classList.contains("theme2")) {
+
+                    document.body.classList.remove("theme2");
+                    document.body.classList.add("theme1");
+
+                    document.cookie = "Theme=theme1";
+                }
             }
         }
     </script>
