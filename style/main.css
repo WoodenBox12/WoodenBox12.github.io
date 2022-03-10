@@ -9,3 +9,9 @@ body {
 .heading {
 	font-size: 400%;
 }
+.background1 {
+	background-image: url(../images/dan.png); 
+}
+.background2 {
+	background-color: #222222;
+}

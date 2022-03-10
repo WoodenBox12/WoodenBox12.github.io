@@ -1,44 +1,68 @@
 <!DOCTYPE html>
-
 <html lang="en-gb">
 
 <head>
     <link rel="stylesheet" href="./style/main.css" />
-
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
 </head>
 
 <body>
 
     <h1 class="heading">other</h1>
 
-    <button type="button" onclick="myFunction()">Button</button>
+    <button type="button" onclick="backgroundChange()">Background Cycle</button>
 
-    <p>woah!</p>
+    <button type="button" onclick="removeCookies()">Remove Cookies</button>
+
+    <div><br />Woah!!</div>
 
     <script>
-        function myFunction() {
+        function backgroundChange() {
+            if (getCookie("Background") == "background1") {
 
-            if (document.body.style.backgroundColor == "#222222") {
+                document.body.classList.remove("background1");
+                document.body.classList.add("background2");
 
-                document.body.style.backgroundColor = "blue";
+                document.cookie = "Background=background2";
             }
-            else if (document.body.style.backgroundColor == "blue") {
 
-                document.body.style.backgroundColor = "#222222";
+            if (getCookie("Background") == "background2") {
+
+                document.body.classList.remove("background2");
+                document.body.classList.add("background1");
+
+                document.cookie = "Background=background1";
             }
+
             else {
 
-                document.body.style.backgroundColor = "blue";
-
-                document.body.classList.toggle("background");
+                document.cookie = "Background=background1";
             }
-
         }
     </script>
 
+    <script>
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
 
-    document.body.classList.toggle("background")
+        function removeCookies() {
+
+            document.cookie = "Background=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+        }
+    </script>
 
 </body>
-
 </html>
