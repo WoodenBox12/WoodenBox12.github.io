@@ -1,14 +1,14 @@
 body {
-	background-color: #222222;
-	color: white;
 	text-align: center;
 }
 .heading {
 	font-size: 400%;
 }
-.background1 {
-	background-image: url(../images/dan.png); 
+.theme1 {
+	background-image: url(../images/dan.png);
+	color: white;
 }
-.background2 {
+.theme2 {
 	background-color: #222222;
+	color: white;
 }

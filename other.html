@@ -3,62 +3,73 @@
 
 <head>
 
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+
 </head>
 
-<body class="background2">
+<body class="theme2">
 
     <h1 class="heading">other</h1>
 
-    <button type="button" onclick="backgroundChange()">Background Cycle</button>
+    <button type="button" onclick="themeChange()">Theme Cycle</button>
 
     <button type="button" onclick="removeCookie()">Remove Cookies</button>
 
     <div><br />Woah!!</div>
 
+
+    <script src="./script/cookie.js"></script>
+
     <script>
-        function backgroundChange() {
-            if (getCookie("Background") == "background1") {
 
-                document.body.classList.remove("background1");
-                document.body.classList.add("background2");
+        function themeChange() {
+            if (getCookie("Theme") == "theme1") {
 
-                document.cookie = "Background=background2";
+                document.body.classList.remove("theme1");
+                document.body.classList.add("theme2");
+
+                document.cookie = "Theme=theme2";
             }
 
-            else if (getCookie("Background") == "background2") {
+            else if (getCookie("Theme") == "theme2") {
 
-                document.body.classList.remove("background2");
-                document.body.classList.add("background1");
+                document.body.classList.remove("theme2");
+                document.body.classList.add("theme1");
 
-                document.cookie = "Background=background1";
+                document.cookie = "Theme=theme1";
             }
 
             else {
 
 
-                if (document.body.classList.contains("background1")) {
+                if (document.body.classList.contains("theme1")) {
 
-                    document.body.classList.remove("background1");
-                    document.body.classList.add("background2");
+                    document.body.classList.remove("theme1");
+                    document.body.classList.add("theme2");
 
-                    document.cookie = "Background=background2";
+                    document.cookie = "Theme=theme2";
                 }
 
-                else if (document.body.classList.contains("background2")) {
+                else if (document.body.classList.contains("theme2")) {
 
-                    document.body.classList.remove("background2");
-                    document.body.classList.add("background1");
+                    document.body.classList.remove("theme2");
+                    document.body.classList.add("theme1");
 
-                    document.cookie = "Background=background1";
+                    document.cookie = "Theme=theme1";
                 }
             }
         }
     </script>
 
-    <script src="./script/cookie.js"></script>
+    <script>
+
+        document.body.onload = themeChange()
+
+    </script>
+
 </body>
 </html>

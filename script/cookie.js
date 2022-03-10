@@ -20,21 +20,9 @@ function getCookie(cname) {
     }
     return "";
 }
-
-function checkCookie() {
-    let user = getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 365);
-        }
-    }
-}
 // end of w3 schools epic functions
 
 function removeCookie() {
 
-    document.cookie = "Background=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    document.cookie = "Theme=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
 }
