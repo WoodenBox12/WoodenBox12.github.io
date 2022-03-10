@@ -6,9 +6,9 @@ body {
 .heading {
 	font-size: 400%;
 }
-.background {
-	background-image: url(./images/dan.png); 
+.background1 {
+	background-image: url(../images/dan.png); 
 }
-#woah {
-	color: white;
+.background2 {
+	background-color: #222222;
 }

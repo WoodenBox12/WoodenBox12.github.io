@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en-gb">
 
 <head>
@@ -7,38 +6,20 @@
 
 </head>
 
-<body id="woah">
+<body>
 
     <h1 class="heading">other</h1>
 
     <button type="button" onclick="myFunction()">Button</button>
 
-    <p>woah!</p>
+    <div><br />Woah!!</div>
 
     <script>
         function myFunction() {
 
-            if (document.getElementById("woah").style.backgroundColor == "#222222") {
-
-                document.getElementById("woah").style.backgroundColor = "blue";
-            }
-            else if (document.getElementById("woah").style.backgroundColor == "blue") {
-
-                document.getElementById("woah").style.backgroundColor = "#222222";
-            }
-            else {
-
-                document.getElementById("woah").style.backgroundColor = "blue";
-
-                document.getElementById("woah").classList.toggle("background");
-            }
-
+            document.body.classList.toggle("background1");
         }
     </script>
 
-
-    document.getElementById("woah").classList.toggle("background")
-
 </body>
-
 </html>
