@@ -7,7 +7,7 @@
 
 </head>
 
-<body id="woah">
+<body>
 
     <h1 class="heading">other</h1>
 
@@ -18,26 +18,26 @@
     <script>
         function myFunction() {
 
-            if (document.getElementById("woah").style.backgroundColor == "#222222") {
+            if (document.body.style.backgroundColor == "#222222") {
 
-                document.getElementById("woah").style.backgroundColor = "blue";
+                document.body.style.backgroundColor = "blue";
             }
-            else if (document.getElementById("woah").style.backgroundColor == "blue") {
+            else if (document.body.style.backgroundColor == "blue") {
 
-                document.getElementById("woah").style.backgroundColor = "#222222";
+                document.body.style.backgroundColor = "#222222";
             }
             else {
 
-                document.getElementById("woah").style.backgroundColor = "blue";
+                document.body.style.backgroundColor = "blue";
 
-                document.getElementById("woah").classList.toggle("background");
+                document.body.classList.toggle("background");
             }
 
         }
     </script>
 
 
-    document.getElementById("woah").classList.toggle("background")
+    document.body.classList.toggle("background")
 
 </body>
 
