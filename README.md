@@ -7,3 +7,4 @@
  - [ ] learn html, css, javascript
  - [x] make liam mode work
  - [ ] make 404 use selected font and possibly rest of theme
+ - [ ] make discord widget using iframe
