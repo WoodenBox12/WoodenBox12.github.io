@@ -1,4 +1,4 @@
-function word(cname, cvalue, remove1, remove2, add1, newCookie=false, valueName="theme2") {
+function cookieLoadSegment(cname, cvalue, remove1, remove2, add1, cookieChange=false) {
 
     if (getCookie(cname) == cvalue) {
 
@@ -6,11 +6,11 @@ function word(cname, cvalue, remove1, remove2, add1, newCookie=false, valueName=
         document.body.classList.remove(remove2);
         document.body.classList.add(add1);
 
-        if (newCookie) {
+        if (cookieChange) {
 
-            var newCookie = "Theme=" + valueName;
+            var workkk = "Theme=" + add1;
 
-            document.cookie = newCookie;
+            document.cookie = workkk;
 
         }
 
@@ -18,14 +18,36 @@ function word(cname, cvalue, remove1, remove2, add1, newCookie=false, valueName=
     }
 }
 
-function themeLoadFromCookie() {
+function classLoadSegment(cvalue, remove1, remove2, add1, cookieChange = false) {
 
-    word("Theme", "theme1", "theme3", "theme2", "theme1")
-    word("Theme", "theme2", "theme2", "theme1", "theme2")
-    word("Theme", "theme3", "theme2", "theme1", "theme3")
+    if (document.body.classList.contains(cvalue)) {
+
+        document.body.classList.remove(remove1);
+        document.body.classList.remove(remove2);
+        document.body.classList.add(add1);
+
+        if (cookieChange) {
+
+            var workkk = "Theme=" + add1;
+
+            document.cookie = workkk;
+
+        }
+
+        return
+    }
 }
 
-function themeChange() {
+
+
+function themeLoadFromCookie() {
+
+    cookieLoadSegment("Theme", "theme1", "theme3", "theme2", "theme1")
+    cookieLoadSegment("Theme", "theme2", "theme2", "theme1", "theme2")
+    cookieLoadSegment("Theme", "theme3", "theme2", "theme1", "theme3")
+}
+
+/*function themeChange() {
 
 
     if (getCookie("Theme") == "theme1") {
@@ -35,12 +57,14 @@ function themeChange() {
         document.body.classList.add("theme2");
 
         document.cookie = "Theme=theme2";
+
+        return
         
     }
 
-    //word("Theme", "theme1", "theme3", "theme1", "theme2", true, "theme2")
+    //cookieLoadSegment("Theme", "theme1", "theme3", "theme1", "theme2", true)
 
-    else if (getCookie("Theme") == "theme2") {
+    if (getCookie("Theme") == "theme2") {
 
         document.body.classList.remove("theme1");
         document.body.classList.remove("theme2");
@@ -48,11 +72,12 @@ function themeChange() {
 
         document.cookie = "Theme=theme3";
 
+        return
     }
 
-    //word("Theme", "theme2", "theme2", "theme1", "theme3", true, "theme3")
+    //cookieLoadSegment("Theme", "theme2", "theme1", "theme2", "theme3", true)
 
-    else if (getCookie("Theme") == "theme3") {
+    if (getCookie("Theme") == "theme3") {
 
         document.body.classList.remove("theme3");
         document.body.classList.remove("theme2");
@@ -61,9 +86,8 @@ function themeChange() {
 
         document.cookie = "Theme=theme1";
 
+        return
     }
-
-    //word("Theme", "theme3", "theme3", "theme2", "theme1", true, "theme2")
 
     else {
 
@@ -94,10 +118,17 @@ function themeChange() {
             document.cookie = "Theme=theme1";
         }
     }
+}*/
 
-    /*word("Theme", "theme1", "theme3", "theme1", "theme2", true, "theme2")
-    word("Theme", "theme2", "theme2", "theme1", "theme3", true, "theme3")
-    word("Theme", "theme3", "theme3", "theme2", "theme1", true, "theme1")*/
+function themeChange() {
+
+    //cookieLoadSegment("Theme", "theme1", "theme3", "theme1", "theme2", true);
+
+    //cookieLoadSegment("Theme", "theme2", "theme1", "theme2", "theme3", true);
+
+    //cookieLoadSegment("Theme", "theme3", "theme3", "theme2", "theme1", true);
+
+
 }
 
 window.onload = themeLoadFromCookie();
