@@ -1,31 +1,28 @@
+function word(cname, cvalue, remove1, remove2, add1, newCookie=false, valueName="theme2") {
+
+    if (getCookie(cname) == cvalue) {
+
+        document.body.classList.remove(remove1);
+        document.body.classList.remove(remove2);
+        document.body.classList.add(add1);
+
+        if (newCookie) {
+
+            var newCookie = "Theme=" + valueName;
+
+            document.cookie = newCookie;
+
+        }
+
+        return
+    }
+}
+
 function themeLoadFromCookie() {
-    if (getCookie("Theme") == "theme1") {
 
-        document.body.classList.remove("theme3");
-        document.body.classList.remove("theme2");
-        document.body.classList.add("theme1");
-
-
-    }
-
-    else if (getCookie("Theme") == "theme2") {
-
-        document.body.classList.remove("theme3");
-        document.body.classList.remove("theme1");
-        document.body.classList.add("theme2");
-
-
-    }
-
-    else if (getCookie("Theme") == "theme3") {
-
-        document.body.classList.remove("them2");
-        document.body.classList.remove("theme1");
-        document.body.classList.add("theme3");
-
-
-    }
-
+    word("Theme", "theme1", "theme3", "theme2", "theme1")
+    word("Theme", "theme2", "theme2", "theme1", "theme2")
+    word("Theme", "theme3", "theme2", "theme1", "theme3")
 }
 
 function themeChange() {
@@ -41,6 +38,8 @@ function themeChange() {
         
     }
 
+    //word("Theme", "theme1", "theme3", "theme1", "theme2", true, "theme2")
+
     else if (getCookie("Theme") == "theme2") {
 
         document.body.classList.remove("theme1");
@@ -50,6 +49,8 @@ function themeChange() {
         document.cookie = "Theme=theme3";
 
     }
+
+    //word("Theme", "theme2", "theme2", "theme1", "theme3", true, "theme3")
 
     else if (getCookie("Theme") == "theme3") {
 
@@ -61,6 +62,8 @@ function themeChange() {
         document.cookie = "Theme=theme1";
 
     }
+
+    //word("Theme", "theme3", "theme3", "theme2", "theme1", true, "theme2")
 
     else {
 
@@ -91,6 +94,10 @@ function themeChange() {
             document.cookie = "Theme=theme1";
         }
     }
+
+    /*word("Theme", "theme1", "theme3", "theme1", "theme2", true, "theme2")
+    word("Theme", "theme2", "theme2", "theme1", "theme3", true, "theme3")
+    word("Theme", "theme3", "theme3", "theme2", "theme1", true, "theme1")*/
 }
 
 window.onload = themeLoadFromCookie();
