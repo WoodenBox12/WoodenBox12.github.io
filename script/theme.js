@@ -45,7 +45,6 @@ function themeChange() {
         return
         
     }
-
     if (getCookie("Theme") == "theme2") {
 
         document.body.classList.remove("theme2");
