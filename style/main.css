@@ -1,18 +1,18 @@
 body {
 	text-align: center;
 }
-.heading {
-	font-size: 400%;
-}
+
 .theme1 {
 	background-color: #222222;
 	color: white;
 }
+
 .theme2 {
 	background-image: url(../images/dan.png);
 	color: forestgreen;
 	font-family: "Trebuchet MS";
 }
+
 @font-face {
 	font-family: iHateLiam;
 	src: url("../fonts/Coca Cola ii.ttf");
