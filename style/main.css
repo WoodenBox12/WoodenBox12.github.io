@@ -1,5 +1,6 @@
 body {
 	text-align: center;
+	
 }
 
 .theme1 {
@@ -9,6 +10,7 @@ body {
 
 .theme2 {
 	background-image: url(../images/dan.png);
+	background-color: #ead5ba;
 	color: forestgreen;
 	font-family: "Trebuchet MS";
 }
@@ -23,12 +25,31 @@ body {
 	font-family: "iHateLiam";
 }
 
+.roundedBox {
+	border: 2px solid #ffffff;
+	text-align: center;
+	border-radius: 15px;
+}
+	.roundedBox::after {
 
+	}
 
+.roundedLinkBox {
+	border: 2px solid #ffffff;
+	background-color: #ffffff;
+	color: black; 
+	text-decoration-line: none;
 
+	padding-left: 10px;
+	padding-right: 10px;
 
+	text-align: center;
+	border-radius: 15px;
+}
 
-
+	.roundedLinkBox:hover {
+		background-color: #343434;
+	}
 
 
 
