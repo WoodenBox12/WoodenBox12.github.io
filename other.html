@@ -22,7 +22,7 @@
     <button class="roundedBox" type="button" onclick="removeCookie()">Remove Cookies</button>
 
     <br />
-    <p class="">Woah!!</p>
+    <p id="woah">Woah!!</p>
     <br />
     <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
     <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
@@ -40,10 +40,25 @@
     <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
 
 
-    <img class="roundedBox" src="./images/dan.png" />
+    <img class="roundedBox" src="./images/dan.png" onclick="woah()"/>
+
 
     <script src="./script/cookie.js"></script>
     <script src="./script/theme.js"></script>
+    <script>
+        var danCount = 0;
 
+        function woah() {
+
+            danCount += 1;
+            let message = "<br /> why would you click on dan you creep";
+            if (danCount == 1) {
+                document.getElementById("woah").innerHTML += message;
+            }
+            else {
+                document.getElementById("woah").innerHTML = "Woah!!" + message.concat(" x", danCount);
+            }
+        }
+    </script>
 </body>
 </html>
