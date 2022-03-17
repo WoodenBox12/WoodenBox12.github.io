@@ -32,9 +32,6 @@ body {
 	border-radius: 15px;
 }
 
-button, a {
-	cursor: pointer;
-}
 	button:hover {
 		background-color: #343434;
 	}
