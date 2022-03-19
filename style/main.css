@@ -32,15 +32,13 @@ body {
 	border-radius: 15px;
 }
 
-	button:hover {
-		background-color: #343434;
-	}
-	a:hover {
+	button, a:hover {
 		background-color: #343434;
 	}
 
-#woah {
-
+.test {
+	width: 5cm;
+	height: 2cm;
 }
 
 
