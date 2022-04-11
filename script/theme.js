@@ -15,7 +15,7 @@ function themeLoadFromCookie() {
     cookieLoadSegment("theme3", "theme2", "theme1", "theme3")
 
     if (getCookie("Theme") == "") {
-        cookieLoadSegment("", "theme3", "theme2", "theme1")
+        document.body.classList.add("theme1");
     }
 }
 

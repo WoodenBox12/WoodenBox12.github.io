@@ -32,25 +32,16 @@ body {
 	border-radius: 15px;
 }
 
-	button, a:hover {
+	button:hover, a:hover {
 		background-color: #343434;
 	}
 
-.test {
-	width: 5cm;
-	height: 2cm;
+#expandingBox {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	transition: width 2s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	#expandingBox:hover {
+		width: 400px;
+	}
