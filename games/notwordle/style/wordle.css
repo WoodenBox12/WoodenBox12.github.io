@@ -20,6 +20,7 @@ body {
 	padding: 10px 10px 10px 10px;
 	margin: 10px 10px 10px 10px;
 	line-height: 20px;
+	border-radius: 8px;
 }
 
 	.header a.link:hover {
@@ -34,3 +35,21 @@ body {
 	line-height: 40px;
 	font-size: 30px;
 }
+
+.box {
+	border-radius: 8px;
+	border: 3px solid black;
+	width: 100px;
+	height: 100px;
+}
+
+.grid {
+	margin: auto;
+	width: 520px;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	gap: 5px;
+}
+
+
+
