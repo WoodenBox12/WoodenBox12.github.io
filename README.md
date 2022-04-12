@@ -8,3 +8,4 @@
  - [x] make 404 use selected font and possibly rest of theme
  - [ ] make discord widget using iframe
  - [x] make theme.js better (learn js functions better)
+ - [ ] make embed in all pages
