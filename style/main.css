@@ -42,7 +42,7 @@ body {
 #expandingBox {
 	width: 200px;
 	height: 200px;
-	background-color: red;
+	background-color: black;
 	transition: width 2s;
 }
 	#expandingBox:hover {
