@@ -5,7 +5,7 @@ function ifEasy() {
 
     if (params.mode == "easy") {
 
-        alert("it seemingly works")
+        alert("easy mode selected")
 
         
     }
@@ -13,14 +13,24 @@ function ifEasy() {
 
 var currentBox = 1;
 var currentLetter;
+var finished = false;
 
 document.addEventListener("keypress", function (event) {
 
-    if (event.code == "Enter") { // enter
-        alert('Enter');
+    if (finished == true) {
+
     }
 
-    else {
+    else if (event.code == "Enter") { // enter
+
+        alert('Enter');
+
+        for (let i = 1; i <= 5 ; i++) {
+            document.getElementById(`box${i}`).style.backgroundColor = "green"
+        }
+    }
+
+    else if (currentBox <= 5) {
         currentLetter = (event.code).charAt(3);
 
         document.getElementById(`box${currentBox}`).innerHTML = currentLetter;
