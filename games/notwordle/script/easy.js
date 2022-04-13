@@ -14,14 +14,29 @@ function ifEasy() {
             }
 
             else if (event.code === "Backspace" || event.code === "Delete") {
-                document.getElementById(`box${--currentBox}`).innerHTML = "";
+
+                if (enterCount + 1 == currentRow) {
+
+
+                }
+
+                else {
+
+                    document.getElementById(`box${--currentBox}`).innerHTML = "";
+                }
             }
 
             else if (event.code == "Enter") { // enter
 
-                for (let i = 1; i <= 5; i++) {
+                if (currentBox % 6 == 0) {
 
-                    document.getElementById(`box${i}`).style.backgroundColor = "green"
+                    currentRow++;
+                    enterCount++;
+
+                    for (let i = 1; i <= 5; i++) {
+
+                        document.getElementById(`box${i}`).style.backgroundColor = "green"
+                    }
                 }
             }
 
@@ -37,8 +52,10 @@ function ifEasy() {
     }
 }
 
+var currentRow = 1;
 var currentBox = 1;
 var currentLetter;
 var finishedRow = false;
+var enterCount = 1;
 
 window.onload = ifEasy();
