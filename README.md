@@ -2,10 +2,10 @@
 ## website
 
 ##### Todo:
+
  - [x] why does code work in local host but not on website, should probally ask ben
  - [x] make it load selected background from cookie
  - [x] make liam mode work
  - [x] make 404 use selected font and possibly rest of theme
- - [ ] make discord widget using iframe
  - [x] make theme.js better (learn js functions better)
- - [ ] make embed in all pages
+ - [x] make embed in all pages
