@@ -90,3 +90,41 @@ body {
 		font-size: 30px;
 	}
 }
+
+@media (max-width: 360px) {
+
+	.header a.link {
+		color: white;
+		text-decoration: none;
+		padding: 10px 10px 10px 10px;
+		margin: 2px 2px 2px 2px;
+		line-height: 20px;
+		border-radius: 8px;
+	}
+
+	.header a.title {
+		color: white;
+		text-decoration: none;
+		padding: 0px 10px 0px 10px;
+		margin: 2px 2px 2px 2px;
+		line-height: 40px;
+		font-size: 25px;
+	}
+
+	#grid {
+		margin: auto;
+		width: 320px;
+		display: grid;
+		grid-template-columns: auto auto auto auto auto;
+		gap: 5px;
+	}
+
+		#grid > div {
+			border-radius: 8px;
+			border: 3px solid black;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			font-size: 30px;
+		}
+}
