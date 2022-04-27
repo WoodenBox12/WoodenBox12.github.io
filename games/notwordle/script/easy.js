@@ -3,6 +3,8 @@ function ifEasy() {
         get: (searchParams, prop) => searchParams.get(prop),
     });
 
+    let words = require('./');
+
     if (params.mode == "easy") {
 
         alert("easy mode selected")
