@@ -44,7 +44,8 @@ function ifEasy() {
 
             else if (currentBox != 6) {
 
-                if (event.code.contains("Key")) {
+                if (event.code.substring(0, 3) == "Key") {
+
                     currentLetter = (event.code).charAt(3);
 
                     document.getElementById(`box${currentBox}`).innerHTML = currentLetter;
