@@ -44,11 +44,13 @@ function ifEasy() {
 
             else if (currentBox != 6) {
 
-                currentLetter = (event.code).charAt(3);
+                if (event.code.contains("Key")) {
+                    currentLetter = (event.code).charAt(3);
 
-                document.getElementById(`box${currentBox}`).innerHTML = currentLetter;
-                currentBox += 1;
+                    document.getElementById(`box${currentBox}`).innerHTML = currentLetter;
+                    currentBox += 1;
 
+                }
             }
         });
     }
