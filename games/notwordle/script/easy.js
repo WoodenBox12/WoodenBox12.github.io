@@ -3,7 +3,7 @@ function ifEasy() {
         get: (searchParams, prop) => searchParams.get(prop),
     });
 
-    let words = require('./');
+    //let words = require('./');
 
     if (params.mode == "easy") {
 
