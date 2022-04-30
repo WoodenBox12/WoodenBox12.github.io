@@ -50,6 +50,54 @@ function ifEasy() {
             }
         });
     }
+
+    else if (params.mode == "normal") {
+
+        alert("normal mode selected")
+
+        document.addEventListener("keydown", function (event) {
+
+            if (finishedRow == true) {
+
+            }
+
+            else if (event.code === "Backspace" || event.code === "Delete") {
+
+                if (enterCount + 1 == currentRow) {
+
+
+                }
+
+                else {
+
+                    document.getElementById(`box${--currentBox}`).innerHTML = "";
+                }
+            }
+
+            else if (event.code == "Enter") { // enter
+
+                if (currentBox % 6 == 0) {
+
+                    currentRow++;
+                    enterCount++;
+
+                    for (let i = 1; i <= 5; i++) {
+
+                        document.getElementById(`box${i}`).style.backgroundColor = "green"
+                    }
+                }
+            }
+
+            else if (currentBox != 6) {
+
+                currentLetter = (event.code).charAt(3);
+
+                document.getElementById(`box${currentBox}`).innerHTML = currentLetter;
+                currentBox += 1;
+
+            }
+        });
+    }
 }
 
 var currentRow = 1;
