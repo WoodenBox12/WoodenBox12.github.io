@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "$id": "http://WoodenBox12.github.io/schema/schema.json",
   "title": "Cuddly",
   "description": "schema for cuddly engine",
