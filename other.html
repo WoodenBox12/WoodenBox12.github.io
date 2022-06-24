@@ -25,7 +25,9 @@
     <br />
     <p id="woah">Woah!!</p>
     <br />
-    
+
+    <div id="Dan"></div>
+
     <div id="expandingBox" style="margin: auto;"></div>
 
     <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
@@ -44,33 +46,35 @@
     <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
 
 
-    <div class="test" ></div>
-
+    <div class="test"></div>
 
     <img class="roundedBox" src="./images/dan.png" onclick="woah()" draggable="false" />
 
     <!--js imports-->
     <div>
-    <a style="color: transparent;" href="./games/notwordle/">wordle</a>
+        <a style="color: transparent;" href="./games/notwordle/">wordle</a>
 
-    <script src="./script/cookie.js"></script>
-    <script src="./script/theme.js"></script>
-    <script src="./script/internet.js"></script>
-    <script>
-        var danCount = 0;
+        <script src="./script/cookie.js"></script>
+        <script src="./script/theme.js"></script>
+        <script src="./script/internet.js"></script>
+        <script>
+            var danCount = 0;
 
-        function woah() {
+            function woah() {
 
-            danCount += 1;
-            let message = "<br /> why would you click on dan you creep";
-            if (danCount == 1) {
-                document.getElementById("woah").innerHTML += message;
+                danCount += 1;
+                let message = "<br /> why would you click on dan you creep";
+                if (danCount === 200) {
+                    document.getElementById("Dan").outerHTML += `<a href="https:\/\/VLE.benjamindanielsimmons.repl.co" class="plainLink roundedBox">your a creepy person</a><br />`;
+                }
+                if (danCount == 1) {
+                    document.getElementById("woah").innerHTML += message;
+                }
+                else {
+                    document.getElementById("woah").innerHTML = "Woah!!" + message.concat(" x", danCount);
+                }
             }
-            else {
-                document.getElementById("woah").innerHTML = "Woah!!" + message.concat(" x", danCount);
-            }
-        }
-    </script>
+        </script>
     </div>
 
 </body>
